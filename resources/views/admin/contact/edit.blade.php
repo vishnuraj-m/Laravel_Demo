@@ -13,23 +13,24 @@
             </button>
         </div>
         @endif
-            <h2>Edit Home About</h2>
+            <h2>Edit Contact</h2>
         </div>
         <div class="card-body">
-            <form action="{{url('update/homeabout/'.$homeabout->id)}}" method="POST">
+            <form action="{{url('update/contact/'.$contacts->id)}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Home Title</label>
-                    <input type="text" name="title" class="form-control" id="exampleFormControlInput1" value="{{$homeabout->title}}">
+                    <label for="exampleFormControlInput1">Contact Email</label>
+                    <input type="email" name="email" class="form-control" id="exampleFormControlInput1" value="{{$contacts->email}}">
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Short Description</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="short_dis" >{{$homeabout->short_dis}}</textarea>
+                    <label for="exampleFormControlInput1">Contact Phone</label>
+                    <input type="text" name="phone" class="form-control" id="exampleFormControlInput1" value="{{$contacts->phone}}">
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Long Description</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="long_dis" >{{$homeabout->long_dis}}</textarea>
+                    <label for="exampleFormControlTextarea1">Contact Address</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="address" placeholder="Address">{{$contacts->address}}</textarea>
                 </div>
+                
                 <div class="form-footer pt-4 pt-5 mt-4 border-top">
                     <button type="submit" class="btn btn-primary btn-default">Update</button>
                 </div>
