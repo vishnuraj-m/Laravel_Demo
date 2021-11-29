@@ -84,4 +84,9 @@ class ContactController extends Controller
         return Redirect()->route('contact')->with('success', 'Message Posted Succesfully');
 
     }
+
+
+    public function AdminMessage(){
+        return view('');
+    }
 }
