@@ -61,7 +61,7 @@
                                 </a>
                             </li>
                             <li class="active">
-                                <a class="sidenav-item-link" href="{{route('all.brand')}}">
+                                <a class="sidenav-item-link" href="{{route('admin.message')}}">
                                     <span class="nav-text">Contact Meaasage</span>
                                 </a>
                             </li>

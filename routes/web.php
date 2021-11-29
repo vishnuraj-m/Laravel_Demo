@@ -97,8 +97,12 @@ Route::get('/contact/edit/{id}', [ContactController::class, 'EditContact']);
 Route::post('/update/contact/{id}', [ContactController::class, 'UpdateContact']);
 Route::get('/contact/delete/{id}', [ContactController::class, 'DeleteContact']);
 
+Route::get('/admin/message', [ContactController::class, 'AdminMessage'])->name('admin.message');
+
 
 //Home Contact Page Route
+Route::get('/contact', [ContactController::class, 'Contact'])->name('contact');
+Route::post('/contact/form', [ContactController::class, 'ContactForm'])->name('contact.form');
 Route::get('/contact', [ContactController::class, 'Contact'])->name('contact');
 
 
