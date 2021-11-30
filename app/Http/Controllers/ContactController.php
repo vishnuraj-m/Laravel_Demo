@@ -87,6 +87,13 @@ class ContactController extends Controller
 
 
     public function AdminMessage(){
-        return view('');
+        $messages = ContactForm::all();
+        return view('admin.contact.message',compact('messages'));
+    }
+
+
+    public function DeleteContactForm($id){
+        $delete = ContactForm::find($id)->Delete();
+        return Redirect()->route('admin.message')->with('success', 'Message Deleted Succesfully');
     }
 }
